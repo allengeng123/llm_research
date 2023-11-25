@@ -1,0 +1,16 @@
+Format: shorter, longer, original (longer is the one to convert so that shorter questions are easy to create: longer 
+questions must contain all tokens from shorter questions)
+
+
+Parents sold 3 crafts for 12 dollars, and is given an extra 7 dollars. Later, 18 dollars are deposited. How many dollars is left?
+Today, Hillary and her parents sold 3 handmade crafts for 12 dollars per craft at a flea market, and is given an extra 7 dollars from an appreciative customer. Later on, 18 dollars are deposited into Hillary's bank account. How many dollars is Hillary left with after making the deposit?
+At a flea market, Hillary sells handmade crafts for 12 dollars per craft. Today, Hillary sells 3 crafts and is given an extra 7 dollars from an appreciative customer. Later on, Hillary deposits 18 dollars from today's profits into her bank account. How many dollars is Hillary left with after making the deposit?
+
+$100 is required. But there's only half of the required money now. Thus increased the amount by $15, and someone gave doubled that amount of increase. How much more is required?
+To buy a new wallet, $100 is required. Betty is saving money for a new wallet, but there's only half of the required money in her wallet now. Her parents thus increased the amount of money by $15, and her grandparents gave doubled that amount of increased money to Bettey. How much more money is required for Betty to buy the wallet?
+Betty is saving money for a new wallet which costs $100. Betty has only half of the money she needs. Her parents decided to give her $15 for that purpose, and her grandparents twice as much as her parents. How much more money does Betty need to buy the wallet?
+
+There are 48 clips, and the total amount increased by half. How many are there now?
+There are 48 clips sold by Natialia to her friends, and the total amount of clips being sold by Natialia increased by half. How many clips sold by Natalia to her friends are there by now?
+There are 48 clips sold by Natialia to her friends in April, and the total amount of clips being sold by Natialia increased by half in May. How many clips sold by Natalia to her friends in April and May are there by now?
+Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?

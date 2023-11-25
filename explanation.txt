@@ -1,0 +1,39 @@
+This file is intended for describing implementing all transformer-lens methods. 
+
+The key idea of this file and the experiment idea behind: 
+1. To examine the effectiveness of changing attention outputs. 
+    Experiment setting involves generating two separate prompts, but the longer one should include all tokens from shorter one. 
+    Then will consider replacing the longer prompt's attention score (this requires alignment between tokens, and exclude those 
+    extra tokens not in shorter prompt) with the shorter prompt's attention score, and see if the generated results for longer prompt would 
+    also be similar to shorter prompt. 
+2. To examine the role of each attention head under this circumstances: there must be some attention heads consistently capture those 
+    important tokens occurring in both longer and shorter prompts. It's possible to suppress them in both prompts and see the results of generation. 
+    On the other hand, there might be attention heads only triggered for longer/shorter prompts, and it's possible to study them. 
+3. To use the differences between longer prompt's attention score and shorter prompt's attention score to perform attention 
+    weight updating, and see if that makes longer prompt's generated results similar to shorter prompt's. (also can check the deviation 
+    of shorter prompts from original model's generation)
+
+Should consider start with smaller experiments. In cot_generate.py, there is a prototype code for interacting with attention score method. 
+Can start with modifying that method first. 
+Main methods to implement: 
+1. convert_shorter_att_score()
+    this method should be performed per head, and being stored in the format for loading directly and replacing the longer prompt's attention score.
+2. hook_load_att_score() 
+    This method is called when longer prompt is being re-run after obtaining shorter prompt's attention score.
+    Also handles storing the score (for future use)
+3. hook_update_att_score()
+    This method loads the stored attention score based on which attention head is being used here, and replace the 
+    attention score with loaded one. 
+
+Realizing the method for updating attention score is already stored. 
+It could be even simpler, since we have the converted attention weight. Therefore need to perform necessary updates, but can 
+be based on attention_modi package's existing code. 
+Whether to perform updates depend on the results of first phase's experiment. Besides, we might need large set of samples to 
+perform this update. 
+
+Lastly: handle the comparison between attention score to handle functionality determination and acquire experiment results. 
+One method is to check which extra tokens are being attended to by each attention head, apart from those being originally 
+attended during shorter prompt generation.
+4. att_head_token_extraction()
+5. att_head_token_comparison()
+    Could consider using extraction method as helper. 
